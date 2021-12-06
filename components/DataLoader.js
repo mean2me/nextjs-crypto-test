@@ -35,7 +35,7 @@ const AppLoader = () => {
   return (
     <div>
       <span>{state?.loading ? 'Loading...' : ''}</span>
-      <div className="flex items-center justify-start h-16 pl-2 top-0 sticky z-50 bg-white">
+      <div className="flex items-center justify-start h-16 pl-2 top-0 left-0 fixed z-50 w-full bg-white">
         <label htmlFor="period">Period: </label>
         <select
           id="period"
@@ -50,7 +50,7 @@ const AppLoader = () => {
           ))}
         </select>
       </div>
-      <div id="data-container" className="flex flex-col w-full">
+      <div id="data-container" className="flex flex-col w-full mt-16">
         {state?.data &&
           Object.keys(state.data)
             .sort((a, b) => b.p - a.p)
